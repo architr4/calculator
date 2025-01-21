@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Calculators</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- First Calculator -->
     <div class="calculator">
         <input type="text" id="display" readonly>
         <div class="buttons">
@@ -31,7 +34,8 @@
         </div>
     </div>
 
-<div class="converter">
+    <!-- Second Calculator -->
+    <div class="converter">
         <input type="text" id="cdisplay" readonly>
         <div class="cbuttons">
             <button data-value="7">7</button>
@@ -49,10 +53,10 @@
             <button data-value="0">0</button>
             <button data-value=".">.</button>
             <button data-value="=">=</button>
-            <button data-value="C">Clear</button>
+            <button data-value="C">C</button>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
