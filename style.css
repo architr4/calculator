@@ -1,6 +1,6 @@
 .calculator {
-    width: 250px;
-    border: 1px solid black;
+    width: 1000px;
+    border: 2px solid black;
     padding: 10px;
 }
 
@@ -14,5 +14,5 @@
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 10px;
 }
