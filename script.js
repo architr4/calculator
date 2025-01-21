@@ -1,5 +1,4 @@
-//In case i mess up something const display = document.getElementById('display'); const buttons = document.querySelectorAll('.buttons button'); buttons.forEach(button => {button.addEventListener('click', () => {const value = button.dataset.value; if (value === '=') {try {display.value = eval(display.value);} catch (error) {display.value = 'Error';} } else { display.value += value;  } }); });
-
+// First Calculator
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.buttons button');
 
@@ -8,15 +7,34 @@ buttons.forEach(button => {
         const value = button.dataset.value;
         if (value === '=') {
             try {
-                // Use eval with '**' for exponentiation safely
                 display.value = eval(display.value.replace('^', '**'));
             } catch (error) {
                 display.value = 'Error';
             }
-        } else if (value === 'C') { // Clear the display if 'C' is pressed
+        } else if (value === 'C') {
             display.value = '';
         } else {
             display.value += value;
+        }
+    });
+});
+
+// Second Calculator (Converter)
+const cDisplay = document.getElementById('cdisplay');
+const cButtons = document.querySelectorAll('.cbuttons button');
+
+cButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const value = button.dataset.value;
+        if (value === 'C') {
+            cDisplay.value = ''; 
+        } else if (value === 'kg') {
+           
+            cDisplay.value = `${(parseFloat(cDisplay.value) * 0.453592).toFixed(2)} kg`;
+        } else if (value === 'lbs') {
+            cDisplay.value = `${(parseFloat(cDisplay.value) / 0.453592).toFixed(2)} lbs`;
+        } else {
+            cDisplay.value += value;
         }
     });
 });
