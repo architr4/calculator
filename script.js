@@ -33,7 +33,10 @@ cButtons.forEach(button => {
             cDisplay.value = `${(parseFloat(cDisplay.value) * 0.453592).toFixed(2)} kg`;
         } else if (value === 'lbs') {
             cDisplay.value = `${(parseFloat(cDisplay.value) / 0.453592).toFixed(2)} lbs`;
-        } else {
+        }  else if (value === 'fahrenheit') {
+            cDisplay.value = `${((parseFloat(cDisplay.value) *.55 ) + 32)).toFixed(2)} F`;
+        }
+        else {
             cDisplay.value += value;
         }
     });
